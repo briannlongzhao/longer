@@ -16,3 +16,4 @@ while True:
     for event in pygame.event.get():
         if event.type in (QUIT, KEYDOWN):
             sys.exit()
+print("shayu")
