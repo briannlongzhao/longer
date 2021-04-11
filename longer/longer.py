@@ -4,13 +4,17 @@ import sys
 
 print('shark longer')
 pygame.init()
+
+if not pygame.font.get_init():
+    pygame.font.init()
+
 screen = pygame.display.set_mode((500, 500))
-myfont = pygame.font.Font(None, 50)
+myfont = pygame.font.Font(None, 100)
 white = 255, 255, 255
-blue = 0, 255, 255
-textImage = myfont.render("FUCK", True, white)
-screen.fill(blue)
-screen.blit(textImage, (100, 100))
+red = 255, 0, 0
+textImage = myfont.render("STOP", True, white)
+screen.fill(red)
+screen.blit(textImage, (170, 200))
 pygame.display.update()
 while True:
     for event in pygame.event.get():
